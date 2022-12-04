@@ -1,7 +1,10 @@
 import customtkinter, tkinter
 from math import trunc
 from PIL import Image
+from pathlib import Path
 
+PROJECT_ROOT = Path(__file__).parents[1]
+IMAGES_ROOT = PROJECT_ROOT / 'images'
 
 class App(customtkinter.CTk):
     def __init__(self):
@@ -22,14 +25,14 @@ class App(customtkinter.CTk):
         self.idealL = 13
 
 
-        self.my_image1 = customtkinter.CTkImage(light_image=Image.open("D:\Studies\Engineering\Hackus2\\biome\images\hand.png"), size=(130, 130))
-        self.my_image2 = customtkinter.CTkImage(light_image=Image.open("D:\Studies\Engineering\Hackus2\\biome\images\peas.jpg"), size=(130, 130))
-        self.my_image3 = customtkinter.CTkImage(light_image=Image.open("D:\Studies\Engineering\Hackus2\\biome\images\hand2.jpeg"), size=(130, 130))
+        self.my_image1 = customtkinter.CTkImage(light_image=Image.open(IMAGES_ROOT / 'hand.png'), size=(130, 130))
+        self.my_image2 = customtkinter.CTkImage(light_image=Image.open(IMAGES_ROOT / 'peas.jpg'), size=(130, 130))
+        self.my_image3 = customtkinter.CTkImage(light_image=Image.open(IMAGES_ROOT / 'hand2.jpeg'), size=(130, 130))
 
         self.db = [["Tomato",75, 27, 13,self.my_image1], ["Peas", 90, 22, 5, self.my_image2], ["brinjal", 60, 24, 7,self.my_image3]]
         self.plant = 0
 
-        self.geometry("600x400")
+        self.geometry("1000x600")
         self.title("small example app")
         self.minsize(800, 600)
 
@@ -79,7 +82,7 @@ class App(customtkinter.CTk):
         self.label9.grid(row=6, column=1, columnspan=1, padx=20, pady=(20, 0), sticky="nsew")
 
         # label containing image
-        self.back_image1 = customtkinter.CTkImage(light_image=Image.open("D:\Studies\Engineering\Hackus2\python_gui\images\logo1.jpg"), size=(200, 200))    
+        self.back_image1 = customtkinter.CTkImage(light_image=Image.open(IMAGES_ROOT / 'logo1.jpg'), size=(200, 200))    
         self.labe20 = customtkinter.CTkLabel(master=self, image=self.back_image1, text = " ")
         self.labe20.grid(row=4, column=3, columnspan=1, padx=20, pady=(20, 0), sticky="nsew")
 
