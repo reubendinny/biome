@@ -22,9 +22,9 @@ class App(customtkinter.CTk):
         self.idealL = 13
 
 
-        self.my_image1 = customtkinter.CTkImage(light_image=Image.open("D:\Studies\Engineering\Hackus2\python_gui\images\hand.png"), size=(130, 130))
-        self.my_image2 = customtkinter.CTkImage(light_image=Image.open("D:\Studies\Engineering\Hackus2\python_gui\images\peas.jpg"), size=(130, 130))
-        self.my_image3 = customtkinter.CTkImage(light_image=Image.open("D:\Studies\Engineering\Hackus2\python_gui\images\hand2.jpeg"), size=(130, 130))
+        self.my_image1 = customtkinter.CTkImage(light_image=Image.open("D:\Studies\Engineering\Hackus2\biome\images\hand.png"), size=(130, 130))
+        self.my_image2 = customtkinter.CTkImage(light_image=Image.open("D:\Studies\Engineering\Hackus2\biome\images\peas.jpg"), size=(130, 130))
+        self.my_image3 = customtkinter.CTkImage(light_image=Image.open("D:\Studies\Engineering\HHackus2\biome\images\hand2.jpeg"), size=(130, 130))
 
         self.db = [["Tomato",75, 27, 13,self.my_image1], ["Peas", 90, 22, 5, self.my_image2], ["brinjal", 60, 24, 7,self.my_image3]]
         self.plant = 0
